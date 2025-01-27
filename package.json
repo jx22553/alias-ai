@@ -1,0 +1,38 @@
+{
+  "name": "alias-ai",
+  "displayName": "Alias AI",
+  "description": "An AI-powered extension to suggest better variable names in your code.",
+  "version": "1.0.0",
+  "publisher": "alias-ai",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": [
+    "onCommand:aliasai.renameVariables",
+    "onCommand:aliasai.setApiKey"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "aliasai.renameVariables",
+        "title": "Alias AI: Rename Variables",
+        "category": "Alias AI"
+      },
+      {
+        "command": "aliasai.setApiKey",
+        "title": "Alias AI: Set API Key",
+        "category": "Alias AI"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^16.0.0",
+    "@types/vscode": "^1.60.0",
+    "@vscode/test-electron": "^2.0.0"
+  },
+  "dependencies": {
+    "openai": "^4.0.0"
+  }
+}
