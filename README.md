@@ -1,6 +1,6 @@
 # Alias AI
 
-**Alias AI** is a Visual Studio Code extension powered by AI that helps you rename variables, functions, and classes to cleaner, more professional names. It analyzes your code, provides multiple context-aware suggestions, and ensures your code is easier to understand and maintain.
+**Alias AI** is a Visual Studio Code extension powered by AI that helps you rename variables, functions, and classes to cleaner, more professional names. It analyzes your code, provides multiple context-aware suggestions, and ensures your code is easier to understand and maintain. 
 
 ---
 
@@ -27,7 +27,7 @@ To use Alias AI, you will need an **OpenAI API key**. The API key enables the ex
 2. Go to the **Extensions View** by clicking the Extensions icon in the Activity Bar on the side of the window.
 3. Search for **Alias AI** in the Extensions Marketplace.
 4. Click **Install** to add the extension to your editor.
-5. Reload VS Code if prompted.
+5. Reload VS Code if prompted..
 
 ---
 

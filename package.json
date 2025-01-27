@@ -2,7 +2,7 @@
   "name": "alias-ai",
   "displayName": "Alias AI",
   "description": "An AI-powered extension to suggest better variable names in your code.",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "publisher": "alias-ai",
   "engines": {
     "vscode": "^1.60.0"

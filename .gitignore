@@ -1,6 +1,7 @@
 # Node.js dependencies
 node_modules/
 dist/
+dist1/
 
 # VS Code settings
 .vscode/
