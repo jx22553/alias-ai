@@ -1,3 +1,41 @@
-node_modules
+# Node.js dependencies
+node_modules/
+dist/
+dist1/
+
+# VS Code settings
+.vscode/
 .vscode-test/
-*.vsix
+.vscode-test.mjs
+.vscodeignore
+
+# Logs
+*.log
+
+# Build output
+out/
+build/
+
+# Dependency lock files (optional, if you prefer to avoid committing them)
+package-lock.json
+yarn.lock
+
+# TypeScript build files
+*.js.map
+*.d.ts
+
+# Temporary files
+*.tmp
+*.temp
+
+# IDE or editor-specific files
+*.swp
+*.idea/
+.DS_Store
+
+# Coverage reports
+coverage/
+
+# Environment files
+.env
+.env.local

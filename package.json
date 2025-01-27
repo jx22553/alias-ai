@@ -2,7 +2,7 @@
   "name": "alias-ai",
   "displayName": "Alias AI",
   "description": "An AI-powered extension to suggest better variable names in your code.",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "publisher": "alias-ai",
   "engines": {
     "vscode": "^1.60.0"
@@ -27,6 +27,14 @@
       }
     ]
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jx22553/alias-ai.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jx22553/alias-ai/issues"
+  },
+  "homepage": "https://github.com/jx22553/alias-ai#readme",
   "devDependencies": {
     "@types/node": "^16.0.0",
     "@types/vscode": "^1.60.0",
