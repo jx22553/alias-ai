@@ -107,7 +107,7 @@ const data = { a: 1, b: 2 };
 
 If you encounter any issues, have suggestions, or need help, feel free to:
 
-1. Create an issue in the [GitHub repository](https://github.com/your-repository-link).
+1. Create an issue in the [GitHub repository](https://https://github.com/jx22553/alias-ai).
 2. Reach out to us directly through the [Visual Studio Code Marketplace page](https://marketplace.visualstudio.com/).
 
 We’re here to help and continuously improve Alias AI! 🎉
