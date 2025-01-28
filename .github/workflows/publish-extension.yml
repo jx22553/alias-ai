@@ -37,12 +37,15 @@ jobs:
         fs.writeFileSync(path, JSON.stringify(package, null, 2));
         console.log(`::set-output name=version::${package.version}`);
         "
-
-    # Step 5: Commit the version bump
+        
+      # Step 5: Commit the version bump
     - name: Commit version bump
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         git config user.name "${{ secrets.GIT_USER_NAME }}"
         git config user.email "${{ secrets.GIT_EMAIL }}"
+        git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}
         git add package.json
         git commit -m "Bump version to ${{ steps.version.outputs.version }}"
         git push
