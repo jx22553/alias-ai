@@ -46,6 +46,10 @@ jobs:
         git remote add origin https://${{ secrets.ALIAS_AI_PAT_TOKEN }}@github.com/${{ github.repository }}
         git add package.json
         git commit -m "Bump version to ${{ steps.version.outputs.version }}"
+
+        echo "Repository: ${{ github.repository }}"
+        echo "New Version: ${{ steps.version.outputs.version }}"
+
         git push
 
     # Step 6: Package and publish extension
