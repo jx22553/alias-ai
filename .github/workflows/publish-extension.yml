@@ -51,7 +51,7 @@ jobs:
         echo "Repository: ${{ github.repository }}"
         echo "New Version: ${{ steps.version.outputs.version }}"
 
-        git push
+        git push --set-upstream origin main
 
     # Step 6: Package and publish extension
     - name: Publish to VS Code Marketplace
