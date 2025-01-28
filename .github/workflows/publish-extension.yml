@@ -41,7 +41,7 @@ jobs:
       # Step 5: Commit the version bump
     - name: Commit version bump
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.ALIAS_AI_PAT_TOKEN }}
       run: |
         git config user.name "${{ secrets.GIT_USER_NAME }}"
         git config user.email "${{ secrets.GIT_EMAIL }}"
