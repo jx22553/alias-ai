@@ -41,8 +41,8 @@ jobs:
     # Step 5: Commit the version bump
     - name: Commit version bump
       run: |
-        git config user.name "GitHub Actions"
-        git config user.email "actions@github.com"
+        git config user.name "${{ secrets.GIT_USER_NAME }}"
+        git config user.email "${{ secrets.GIT_EMAIL }}"
         git add package.json
         git commit -m "Bump version to ${{ steps.version.outputs.version }}"
         git push
@@ -52,4 +52,4 @@ jobs:
       run: |
         npm install -g @vscode/vsce
         vsce package
-        vsce publish -p ${{ secrets.VSCE_TOKEN }}
+        vsce publish -p ${{ secrets.ALIAS_AI_PUBLISH_TOKEN }}
