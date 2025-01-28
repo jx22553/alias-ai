@@ -12,6 +12,7 @@
 - ✅ **Apply Changes Effortlessly**: Approve and apply the suggested names directly from the UI.
 - 🔄 **Real-Time Feedback**: Automatically analyzes and updates suggestions as you work.
 - 🔒 **Secure API Key Storage**: Use VS Code's secret storage to securely store your OpenAI API key.
+- 🌐 **Multi-Language Support**: Works seamlessly with JavaScript, TypeScript, Python, Java, and C++ code.
 
 ---
 
@@ -27,26 +28,35 @@ To use Alias AI, you will need an **OpenAI API key**. The API key enables the ex
 2. Go to the **Extensions View** by clicking the Extensions icon in the Activity Bar on the side of the window.
 3. Search for **Alias AI** in the Extensions Marketplace.
 4. Click **Install** to add the extension to your editor.
-5. Reload VS Code if prompted..
+5. Reload VS Code if prompted.
+
+---
+
+## How to Obtain an OpenAI API Key
+
+1. Visit the [OpenAI platform](https://platform.openai.com/).
+2. Sign in or create an OpenAI account.
+3. Navigate to the **API Keys** section under your account settings.
+4. Click **Create New Key** to generate an API key.
+5. Copy the key to a secure location. You will use this key to set up Alias AI.
 
 ---
 
 ## Setting Up Your OpenAI API Key
 
-To use Alias AI, you'll need an OpenAI API key. Follow these steps to set it up:
+To use Alias AI, you'll need to configure your OpenAI API key in the extension. Follow these steps:
 
-1. Obtain your API key from the [OpenAI platform](https://platform.openai.com/).
-2. In VS Code, press `Ctrl+Shift+P` (or `Cmd+Shift+P` on macOS) to open the Command Palette.
-3. Search for and select `Alias AI: Set API Key`.
-4. Enter your OpenAI API key when prompted and press `Enter`.
-5. You’ll see a confirmation message once the key is securely stored.
+1. Press `Ctrl+Shift+P` (or `Cmd+Shift+P` on macOS) in VS Code to open the Command Palette.
+2. Search for and select `Alias AI: Set API Key`.
+3. Enter your OpenAI API key when prompted and press `Enter`.
+4. You’ll see a confirmation message once the key is securely stored.
 
 ---
 
 ## How to Use
 
 ### 1. Open a Code File
-- Open a JavaScript or TypeScript file in Visual Studio Code.
+- Open a supported file (JavaScript, TypeScript, Python, Java, or C++) in Visual Studio Code.
 
 ### 2. Trigger the Command
 - Press `Ctrl+Shift+P` (or `Cmd+Shift+P` on macOS) to open the Command Palette.

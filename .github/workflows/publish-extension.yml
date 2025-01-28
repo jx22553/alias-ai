@@ -1,0 +1,55 @@
+name: Publish to VS Code Marketplace
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Check out the repository
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Step 2: Set up Node.js
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+
+    # Step 3: Install dependencies
+    - name: Install dependencies
+      run: npm install
+
+    # Step 4: Increment version in package.json
+    - name: Increment version
+      id: version
+      run: |
+        node -e "
+        const fs = require('fs');
+        const path = './package.json';
+        const package = JSON.parse(fs.readFileSync(path));
+        const [major, minor, patch] = package.version.split('.').map(Number);
+        package.version = [major, minor, patch + 1].join('.');
+        fs.writeFileSync(path, JSON.stringify(package, null, 2));
+        console.log(`::set-output name=version::${package.version}`);
+        "
+
+    # Step 5: Commit the version bump
+    - name: Commit version bump
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+        git add package.json
+        git commit -m "Bump version to ${{ steps.version.outputs.version }}"
+        git push
+
+    # Step 6: Package and publish extension
+    - name: Publish to VS Code Marketplace
+      run: |
+        npm install -g @vscode/vsce
+        vsce package
+        vsce publish -p ${{ secrets.VSCE_TOKEN }}
