@@ -44,7 +44,7 @@ jobs:
         git config user.name "${{ secrets.GIT_USER_NAME }}"
         git config user.email "${{ secrets.GIT_EMAIL }}"
         git remote remove origin
-        git remote add origin https://${{ secrets.ALIAS_AI_PAT_TOKEN }}@github.com/${{ github.repository }}
+        git remote add origin https://${{ secrets.ALIAS_AI_GIT_ACTIONS }}@github.com/${{ github.repository }}
         git add package.json
         git commit -m "Bump version to ${{ steps.version.outputs.version }}"
 
